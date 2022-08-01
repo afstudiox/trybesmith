@@ -12,7 +12,7 @@ const errorhandlerMiddleware = (
   _next: NextFunction,
 ) => {
   const status = errors[err.name];
-  if (!status) res.sendStatus(500);
+  if (!status) return res.sendStatus(500);
   res.status(status).json({ message: err.message });
 };
 
