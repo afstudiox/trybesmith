@@ -26,3 +26,8 @@ export interface User extends Indexable{
 
 // tipo para adicionar usuário sem o id
 export type AddUser = Omit<User, 'id'>;
+
+// tipo completo da Orders
+export interface Orders extends Indexable{
+  userId: number;
+}
