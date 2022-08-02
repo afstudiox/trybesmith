@@ -1,6 +1,7 @@
 import { Orders } from '../types';
 import connection from './connection';
 
+// https://universodosdados.com/tag/json_arrayagg/#:~:text=Transforma%20Relacional%20em%20JSON%2C%20usando%20Atributos%20Simples%20ou%20com%20Arrays&text=JSON_OBJECT%20transforma%20uma%20coluna%20em,disciplinas%20que%20cada%20um%20cursa.
 const orderModel = {
   async getAll(): Promise<Orders[]> {
     const sql = `
