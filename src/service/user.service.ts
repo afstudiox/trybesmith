@@ -1,4 +1,4 @@
-import { Secret, sign } from 'jsonwebtoken';
+import { sign } from 'jsonwebtoken';
 
 import userModel from '../models/user.model';
 import { AddUser, User } from '../types';
