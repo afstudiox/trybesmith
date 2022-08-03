@@ -1,7 +1,10 @@
 import { sign } from 'jsonwebtoken';
 
+import dotenv from 'dotenv';
 import userModel from '../models/user.model';
 import { AddUser, User } from '../types';
+
+dotenv.config();
 
 const secret = process.env.JWT_SECRET as string;
 
