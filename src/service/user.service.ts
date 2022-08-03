@@ -1,4 +1,4 @@
-import { sign } from 'jsonwebtoken';
+import { Secret, sign } from 'jsonwebtoken';
 
 import dotenv from 'dotenv';
 import userModel from '../models/user.model';
@@ -6,10 +6,10 @@ import { AddUser, User } from '../types';
 
 dotenv.config();
 
-const secret = process.env.JWT_SECRET as string;
+const secret:Secret = process.env.JWT_SECRET as string;
 
 const userService = {
-  makeToken: async (payload: string) => { // somente o username esta sendo enviado para gerar o token
+  makeToken: async (payload: string):Promise <string> => { // somente o username esta sendo enviado para gerar o token
     const token = sign(payload, secret); 
     return token; // retorna o token 
   },
